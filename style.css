@@ -7,8 +7,16 @@
     src: url(Font/Santana-BlackCondensed.ttf) format('truetype');
 }
 @font-face {
-    font-family: "Santana-Bolt";
+    font-family: "Santana-Bold";
     src: url(Font/Santana-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: "Poppins-Black";
+    src: url(Font/Poppins-Black.ttf);
+}
+@font-face {
+    font-family: "Poppins-Light";
+    src: url(Font/Poppins-Light.ttf);
 }
 
 *
@@ -16,17 +24,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins-Black", Helvetica, sans-serif;
     color: white;
 }
 html, body
 {
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    justify-content: space-between;
+    overflow: scroll;
+}
+.container
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: scroll;
 }
 section
 {
@@ -44,7 +56,7 @@ section .top
     position:relative;
     align-items: center;
     width: 100%;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 section .top ul
 {
@@ -53,27 +65,29 @@ section .top ul
 section .top ul li
 {
     display: inline-block;
-    padding: 20px;  
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;  
 }
 section .top p
 {
     font-size: 40px;
     color: white;
-    font-family:"Santana-Bolt"
+    font-family:"Santana-Bold"
 }
 .content
 {
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .text
 {
     position: relative;
-    width: 60%;
+    width: 50%;
     align-items:center;
+    padding-left: 50px;
 }
 .text h1{
     font-size: 4em;
@@ -88,12 +102,80 @@ section .top p
 {
     font-size: 20px;
     color: black;
+    font-family: "Poppins-Light";
 }
 .text a
 {
-    color: blue;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #017143;
+    border-radius: 40px;
+    color: white;
 }
 .image
 {
+    padding-top: 100px;
+    padding-right: 100px;
     position: relative;
+    max-width: 580px;
+    max-height: 580px;
+}
+.option
+{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.option li
+{
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.option li:hover
+{
+    transform: translateY(-15px); 
+}
+.option li img
+{
+    max-width: 100px;
+    max-height: 100px;
+}
+.contact
+{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact li
+{
+    list-style: none;
+}
+.contact li a
+{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+.circle
+{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 800px);
 }
