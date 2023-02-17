@@ -35,7 +35,7 @@ section
     position:relative;
     align-items: center;
     width: 100%;
-    background-color: #044d16;
+    background-color: #017143;/*44d16*/
 }
 section .top
 {
@@ -44,7 +44,7 @@ section .top
     position:relative;
     align-items: center;
     width: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 section .top ul
 {
@@ -61,15 +61,39 @@ section .top p
     color: white;
     font-family:"Santana-Bolt"
 }
-.face
+.content
 {
     position: relative;
     width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.text
+{
+    position: relative;
+    width: 60%;
+    align-items:center;
+}
+.text h1{
+    font-size: 4em;
+    color: #333;
+}
+.text h1 span
+{
+    font-size: 1.2em;
+    color: #017143;
+}
+.text p
+{
+    font-size: 20px;
+    color: black;
+}
+.text a
+{
+    color: blue;
 }
 .image
 {
-    position: absolute;
-    top:25%;
-    left: 75%;
+    position: relative;
 }
