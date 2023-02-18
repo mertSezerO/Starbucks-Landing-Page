@@ -118,6 +118,9 @@ section .top p
     padding-top: 100px;
     padding-right: 100px;
     position: relative;
+}
+.image img
+{
     max-width: 580px;
     max-height: 580px;
 }
